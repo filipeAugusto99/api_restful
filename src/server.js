@@ -10,7 +10,9 @@ const app = express()
 db.connect()
 
 //habilita server para receber dados via port
-app.use(express.urlencoded({ extended: true }))
+//app.use(express.urlencoded({ extended: true }))
+//habilita server para receber dados JSON
+app.use(express.json())
 
 // definindo as rotas
 app.use('/api', routes)
