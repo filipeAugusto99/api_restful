@@ -46,7 +46,7 @@ async function put(req, res) {
   await product.updateOne(req.body)
 
   res.send({
-    message: 'sucess',
+    message: 'success',
     product,
   })
 */
@@ -56,8 +56,8 @@ async function remove(req, res) {
   const { id } = req.params
 
   const remove = await ProductsModel.deleteOne({ _id : id })
-
-  const message = remove.ok ? 'sucess' : 'e'
+  
+  const message = remove.ok ? 'e' : 'success'
 
   res.send({
     message,
